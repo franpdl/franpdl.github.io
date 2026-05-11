@@ -1,0 +1,130 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    background-color: #0a0a0a;
+}
+
+
+/* Sección Hero - AJUSTE DE ZOOM CORREGIDO */
+.hero {
+    display: flex; /* Asegura que el contenido interno se alinee bien */
+    min-height: 100vh;
+    width: 100%;
+    
+    /* LA IMAGEN */
+    background-image: url("image/justicia.jpg");
+    
+    /* CAMBIO CLAVE: "contain" ajusta la imagen para que quepa ENTERA */
+    background-size: contain; 
+    
+    /* CAMBIO CLAVE: Alineamos a la derecha para que la mujer sea protagonista */
+    background-position: right center; 
+    
+    background-repeat: no-repeat;
+    
+    /* Ponemos el fondo de la sección en negro para que combine con el overlay */
+    background-color: #000; 
+}
+
+.overlay {
+    /* Ajustamos el degradado para que se funda con el fondo negro de la derecha */
+    background: linear-gradient(to right, 
+        rgba(0, 0, 0, 0.95) 0%, 
+        rgba(0, 0, 0, 0.8) 40%, 
+        rgba(0, 0, 0, 0) 100%
+    );
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    width: 100%;
+}
+
+/* Estilo del Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.icon {
+    border: 1px solid #c5a059;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    color: #c5a059;
+}
+
+.brand-text h1 {
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+
+.brand-text span {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: #c5a059;
+}
+
+/* Texto Principal */
+.hero-content {
+    max-width: 600px;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: #c5a059;
+    font-style: italic;
+}
+
+.divider {
+    width: 50px;
+    height: 2px;
+    background-color: #c5a059;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 40px;
+    max-width: 450px;
+}
+
+/* Ubicación */
+.location {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #c5a059;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Responsive básico */
+@media (max-width: 768px) {
+    .main-title { font-size: 2.5rem; }
+    .overlay { background: rgba(0,0,0,0.6); }
+}
