@@ -19,7 +19,7 @@ body {
     width: 100%;
     
     /* LA IMAGEN */
-    background-image: url("image/justicia.jpg");
+    background-image: url("justicia.jpg");
     
     /* CAMBIO CLAVE: "contain" ajusta la imagen para que quepa ENTERA */
     background-size: contain; 
